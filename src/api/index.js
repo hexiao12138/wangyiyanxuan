@@ -28,3 +28,14 @@ export const reqPolicyDescList = () => axios(
    method: 'GET',
    url: '/slideright'
  })
+ // 值得买
+ export const reqBuy = () => axios({
+   method:'GET',
+   url: '/topic/v1/know/navWap.json'
+ })
+
+ // 瀑布流数据
+ export const reqList = () => axios({
+   method: 'GET',
+   url: '/topic/v1/find/recManual.json'
+ })

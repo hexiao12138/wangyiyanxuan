@@ -12,12 +12,10 @@ export default {
   name: 'Header'
 }
 </script>
-<style lang='stylus' rel='stylesheet/stylus' >
+<style lang='stylus' rel='stylesheet/stylus' scoped>
   header 
     height 100px
     display flex
     align-items center
     justify-content space-around
-    .input
-      margin-right 100px
 </style>

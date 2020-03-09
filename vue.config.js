@@ -17,7 +17,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000', // 目标路径
+        target: 'https://m.you.163.com', // 目标路径
         changeOrigin: true, // 是否跨域
         pathRewrite: {
           '^/api': '' // 重写路径

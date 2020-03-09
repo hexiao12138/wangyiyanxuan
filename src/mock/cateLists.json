@@ -1,7 +1,7 @@
 [
 	{
 		"categoryList": [
-				{
+				{		"bigImage": "https://yanxuan.nosdn.127.net/6512cf60c8d8b6e67825317cb2b42025.jpg?quality=75&type=webp&imageView&thumbnail=0x196",
 						"showIndex": 0,
 						"wapBannerUrl": "https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png",
 						"bannerUrl": "https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png",
@@ -207,7 +207,7 @@
 	},
 	{
 		"categoryList": [
-				{
+				{		"bigImage": "https://yanxuan.nosdn.127.net/2ac8dde0444ba9b06991c20087d37967.jpg?quality=75&type=webp&imageView&thumbnail=0x196",
 						"showIndex": 0,
 						"wapBannerUrl": "https://yanxuan.nosdn.127.net/c4bf35c93af25b7c9c8c89ad1b1d19b6.png",
 						"bannerUrl": "https://yanxuan.nosdn.127.net/c4bf35c93af25b7c9c8c89ad1b1d19b6.png",
@@ -439,6 +439,7 @@
 	{
 		"categoryList": [
 				{
+						"bigImage": "https://yanxuan.nosdn.127.net/edc311882c97da117f860264548212e1.png?quality=75&type=webp&imageView&thumbnail=0x196",
 						"showIndex": 0,
 						"wapBannerUrl": "https://yanxuan.nosdn.127.net/4a7eaff4e3cb3b7e90a7e88ffc897f04.png",
 						"bannerUrl": "https://yanxuan.nosdn.127.net/4a7eaff4e3cb3b7e90a7e88ffc897f04.png",
@@ -669,7 +670,8 @@
 	},
 	{
 		"categoryList": [
-				{
+				{   
+						"bigImage": "https://yanxuan.nosdn.127.net/dec6ff5ae8bae410809598950ba1f5b4.jpg?quality=75&type=webp&imageView&thumbnail=0x196",
 						"showIndex": 18,
 						"wapBannerUrl": "https://yanxuan-item.nosdn.127.net/96330c8ddf2d128e950dca368b0ba0b0.png",
 						"bannerUrl": "https://yanxuan-item.nosdn.127.net/96330c8ddf2d128e950dca368b0ba0b0.png",

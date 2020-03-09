@@ -3,6 +3,7 @@ const Category = () => import('../pages/Category')
 const ShopCard = () => import('../pages/ShopCard')
 const User = () => import('../pages/User')
 const Buy = () => import('../pages/Buy')
+
 export default [
   {
     path: '/msite',
@@ -12,6 +13,7 @@ export default [
     path: '/category',
     component: Category
   },
+  
   {
     path: '/user',
     component: User

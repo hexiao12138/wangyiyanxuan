@@ -75,9 +75,11 @@ export default {
 	}
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
-div
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+.wrapper
   width 100%
+  display flex
+  flex-direction column
   img
     width 100%
     height 370px
