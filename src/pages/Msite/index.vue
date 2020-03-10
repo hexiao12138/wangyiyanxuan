@@ -18,8 +18,7 @@
 			</van-swipe-item>
 		</van-swipe>
 		<ul class="reqPolicyDescList" >
-			<li v-for="(i,index) in policyDescList" :key="index">
-			
+			<li v-for="(i,index) in policyDescList" :key="index" @click="goDetail">		
 				<span>{{i.desc}}</span>
 			</li>
 		</ul>

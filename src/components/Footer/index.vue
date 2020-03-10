@@ -1,5 +1,5 @@
 <template>
-		<van-tabbar route fixed safe-area-inset-bottom active-color='#BE464A' inactive-color="#000">
+		<van-tabbar border route fixed safe-area-inset-bottom active-color='#BE464A' inactive-color="#000">
 			<van-tabbar-item replace to="/msite" icon="home-o">
 				首页
 			</van-tabbar-item>

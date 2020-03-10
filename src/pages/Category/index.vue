@@ -11,12 +11,12 @@
                             :class="{on: index === activeKey}"
                             replace
                             @click="goSlide"
-                            :to='{path: `/category`,query: {id: nav.id}}'
+                            :to="{path:'/category',query: {id: nav.id}}"
                              />
         </van-sidebar>
       </div>
       <div class="right">
-        <SlideRight />
+        <router-view></router-view>
       </div>
     </div>
 
@@ -28,7 +28,6 @@ import { Sidebar, SidebarItem } from 'vant'
 Vue.use(Sidebar)
 Vue.use(SidebarItem)
 import { reqSlide } from '../../api'
-import SlideRight from './SlideRight'
 export default {
   name: 'Category',
   data() {
@@ -44,9 +43,6 @@ export default {
       console.log(this.currentIndex);     
     }
   },
-  components: {
-    SlideRight
-  },
   async mounted() {
     const result = await reqSlide()
     if (result.code === 0) {
@@ -55,12 +51,12 @@ export default {
   }
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
 .content
   display flex
   justify-content space-between
   .slide
-    width 150px
+    width 130px
     border-right 1px solid #ccc
     font-size 25px
     height 80px

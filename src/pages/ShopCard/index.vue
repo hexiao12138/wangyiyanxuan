@@ -1,11 +1,13 @@
 <template>
-  <div>购物车</div>
+  <div>
+    购物车
+  </div>
 </template>
 <script>
 export default {
   name: 'ShopCard'
 }
 </script>
-<style lang='stylus' rel='stylesheet/stylus' >
+<style lang='stylus' rel='stylesheet/stylus' scoped >
 
 </style>

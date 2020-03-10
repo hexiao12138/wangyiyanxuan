@@ -22,7 +22,7 @@ export default {
     flex-wrap wrap
     justify-content space-around
     li 
-      width 140px
+      width 120px
       height 130px
       font-size 25px
       margin-bottom 40px
@@ -30,6 +30,6 @@ export default {
       flex-direction column
       align-items center
       img 
-        width 100%
+        width 90%
         height 100%
 </style>

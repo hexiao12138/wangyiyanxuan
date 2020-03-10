@@ -14,20 +14,16 @@
   </div>
 </template>
 <script>
-import {reqSlideRight} from '../../../api'
+import {mapState} from 'vuex'
 export default {
   name: 'SlideRight',
-  data () {
-    return {
-      slide: [],
-    }
+  computed: {
+    ...mapState(['slideRight'])
   },
-  async mounted () {
-    const result = await reqSlideRight()
-    if (result.code === 0) {
-      this.slide = result.data
-      console.log(this.slide);
-    }
+  mounted () {
+    this.$store.dispatch('getSlideRight')
+    console.log(this.slideRight);
+    
   }
 }
 </script>
