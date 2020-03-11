@@ -1,23 +1,28 @@
 <template>
   <div class="nav">
-    <span v-for="(nav,index) in navList" :key="index">{{nav.name}}</span>
+    <span :class="{on: $route.query.id === nav.id}" v-for="(nav,index) in navList" :key="index" @click="goDetail(nav.id)">{{nav.name}}</span>
   </div>
 </template>
 <script>
-import {reqNav} from '../../api'
+import {mapState} from 'vuex'
 export default {
   name: 'Nav',
-  data () {
-    return {
-      navList: []
+   methods: {
+      goDetail (id) {
+        this.$router.replace({
+          path: '/detail',
+          query: {
+            id 
+          }
+        })
+      }
+    },
+    computed: {
+      ...mapState(['navList'])
+    },
+    mounted () {
+      this.$store.dispatch('getNavList')
     }
-  },
-  async mounted () {
-    const result = await reqNav()
-    if (result.code === 0) {
-      this.navList = result.data
-    }
-  }
 }
 </script>
 <style lang='stylus' rel='stylesheet/stylus' scoped >
@@ -29,8 +34,13 @@ export default {
   align-items center
   fon
   span 
+    box-sizing border-box
     height 60px
     line-height 60px
     font-size 25px
     padding 10px
+    margin-bottom 25px
+    &.on 
+      color red
+      border-bottom 2px solid red
 </style>

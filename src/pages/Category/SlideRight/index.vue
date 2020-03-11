@@ -1,35 +1,46 @@
 <template>
-  <div class="slideRight">
+<div class="wrapper" v-if='categoryItem'>
+   <div class="slideRight" >
     <div class="slide-heade">
-      <img src="../../Msite/images/10.png" alt="">
+      <img :src=categoryItem.categoryList[0].bigImage alt="">
     </div>
     <div class="slide-bottom">
       <ul>
-        <li>
-          <img src="../../Msite/images/10.png" alt="">
-          <span>精选好物</span>
+        <li  v-for="(category,index) in categoryItem.categoryList" :key="index" >
+          <img :src=category.wapBannerUrl alt="">
+          <span>{{category.name}}</span>
         </li>
       </ul>
     </div>
   </div>
+</div>
+ 
 </template>
 <script>
 import {mapState} from 'vuex'
 export default {
   name: 'SlideRight',
+  props: ['categoryId'],
+  data () {
+    return {
+     
+    }
+  },
   computed: {
-    ...mapState(['slideRight'])
+    ...mapState(['slideRight']),
+    categoryItem () {
+      return this.slideRight.find(item => item.id === this.categoryId)
+    }
   },
   mounted () {
-    this.$store.dispatch('getSlideRight')
-    console.log(this.slideRight);
-    
+   this.$store.dispatch('getSlideRight')
+      
   }
 }
 </script>
 <style lang='stylus' rel='stylesheet/stylus' >
   .slideRight 
-    width 530px
+    width 460px
     padding 10px
     .slide-heade 
       display flex
@@ -42,7 +53,7 @@ export default {
       ul 
         display flex
         width 100%
-        justify-content space-around
+        justify-content space-between
         flex-wrap wrap
         li 
           display flex
@@ -50,7 +61,7 @@ export default {
           align-items center
           justify-content space-around
           font-size 20px
-          width 176px
+          width 150px
           height 150px
           
         img 

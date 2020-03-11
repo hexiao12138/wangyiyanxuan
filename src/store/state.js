@@ -1,4 +1,5 @@
 export default {
   category: [],
-  slideRight: []
+  slideRight: [],
+  navList: []
 }

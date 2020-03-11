@@ -39,3 +39,26 @@ export const reqPolicyDescList = () => axios(
    method: 'GET',
    url: '/topic/v1/find/recManual.json'
  })
+ // 获取榜单数据
+ export const reqMarket = () => axios({
+   method: 'GET',
+   url: '/market'
+ })
+ // 获取折扣数据
+ export const reqDisCount = () => axios({
+   method: 'GET',
+   url: '/disCount'
+ })
+ // 页面初始化数据
+ export const reqSearch = () => axios({
+   method: 'POST',
+   url: '/xhr/search/init.json'
+ })
+ // 搜索关键字
+ export const reqKeyword = (keywordPrefix) => axios({
+   method: 'POST',
+   url: '/xhr/search/searchAutoComplete.json',
+   data: {
+     keywordPrefix
+   }
+ })

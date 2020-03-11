@@ -4,7 +4,8 @@ const ShopCard = () => import('../pages/ShopCard')
 const User = () => import('../pages/User')
 const Buy = () => import('../pages/Buy')
 const Login = () => import('../pages/Login')
-const SlideRight = () => import('../pages/Category/SlideRight')
+const Detail = () => import('../components/Detail')
+const Search = () => import('../pages/Search')
 export default [
   {
     path: '/msite',
@@ -14,14 +15,7 @@ export default [
   {
     path: '/category',
     component: Category,
-    meta: { isShow: true },
-    children: [
-      {
-        path: '/category',
-        name: 'slideRight',
-        component: SlideRight
-      }
-    ]
+     meta: { isShow: true },
   },
   
   {
@@ -47,5 +41,13 @@ export default [
   {
     path: '/login',
     component: Login
+  },
+  {
+    path: '/detail',
+    component: Detail
+  },
+  {
+    path: '/search',
+    component: Search
   }
 ]

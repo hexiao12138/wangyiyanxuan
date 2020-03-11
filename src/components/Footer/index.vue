@@ -1,18 +1,18 @@
 <template>
-		<van-tabbar border route fixed safe-area-inset-bottom active-color='#BE464A' inactive-color="#000">
-			<van-tabbar-item replace to="/msite" icon="home-o">
+		<van-tabbar class="tabbar" border route fixed safe-area-inset-bottom active-color='#BE464A' inactive-color="#000">
+			<van-tabbar-item  class="item" replace to="/msite" icon="home-o" >
 				首页
 			</van-tabbar-item>
-			<van-tabbar-item replace to="/category" icon="coupon-o">
+			<van-tabbar-item class="item" replace to="/category" icon="coupon-o">
 				分类
 			</van-tabbar-item>
-      <van-tabbar-item replace to="/buy" icon="goods-collect-o">
+      <van-tabbar-item class="item" replace to="/buy" icon="goods-collect-o">
 				值得买
 			</van-tabbar-item>
-      <van-tabbar-item replace to="/shopcard" icon="shopping-cart-o">
+      <van-tabbar-item class="item" replace to="/shopcard" icon="shopping-cart-o">
 				购物车
 			</van-tabbar-item>
-      <van-tabbar-item replace to="/user" icon="manager-o">
+      <van-tabbar-item class="item" replace to="/user" icon="manager-o">
 				个人
 			</van-tabbar-item>
 		</van-tabbar>
@@ -27,4 +27,8 @@ export default {
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
+.tabbar 
+	height 80px
+	.item
+		font-size 20px
 </style>

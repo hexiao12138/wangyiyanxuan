@@ -1,8 +1,8 @@
 <template>
 	<ul>
 		<li v-for="(cat,index) in category" :key="index">
-      <img :src="cat.showPicUrl" alt="">
-      <span>{{cat.categoryName}}</span>
+      <img :src="cat.picUrl" alt="">
+      <span>{{cat.text}}</span>
 		</li>
 	</ul>
 </template>
@@ -22,7 +22,7 @@ export default {
     flex-wrap wrap
     justify-content space-around
     li 
-      width 120px
+      width 130px
       height 130px
       font-size 25px
       margin-bottom 40px

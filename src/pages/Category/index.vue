@@ -3,20 +3,18 @@
     <Header />
     <div class="content">
       <div class="left">
-        <van-sidebar v-model="activeKey">
-          <van-sidebar-item v-for="(nav,index) in navList"
+        <van-sidebar >
+          <van-sidebar-item v-for="(nav,index) in slideLeft"
                             :key="index"
                             :title=nav.name
                             class="slide"
-                            :class="{on: index === activeKey}"
+                            :class="{on: nav.id === categoryId}"
                             replace
-                            @click="goSlide"
-                            :to="{path:'/category',query: {id: nav.id}}"
-                             />
+                            :to="{path:'/category',query: {id: nav.id}}" />
         </van-sidebar>
       </div>
       <div class="right">
-        <router-view></router-view>
+        <SlideRight :categoryId='categoryId'/>
       </div>
     </div>
 
@@ -28,39 +26,49 @@ import { Sidebar, SidebarItem } from 'vant'
 Vue.use(Sidebar)
 Vue.use(SidebarItem)
 import { reqSlide } from '../../api'
+import SlideRight from './SlideRight'
 export default {
   name: 'Category',
   data() {
     return {
-      activeKey: 0,
-      navList: [],
-      currentIndex: null
+      slideLeft: []
     }
   },
-  methods: {
-    goSlide () {   
-      this.currentIndex = this.$route.query.id
-      console.log(this.currentIndex);     
+  components: {
+    SlideRight
+  },
+  computed: {
+    categoryId () {   
+      return +this.$route.query.id || 11
     }
   },
-  async mounted() {
-    const result = await reqSlide()
-    if (result.code === 0) {
-      this.navList = result.data
+  methods: { 
+    // 获取左侧导航数据
+    async getSlideLeft() {
+      const result = await reqSlide()
+      if (result.code === 0) {
+        this.slideLeft = result.data
+      }
     }
+  },
+   mounted() {
+
+    this.getSlideLeft()
   }
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 .content
   display flex
-  justify-content space-between
+  justify-content space-around
   .slide
     width 130px
     border-right 1px solid #ccc
     font-size 25px
-    height 80px
-    line-height 50px
+    height 70px
+    line-height 40px
+    border-color #fff
     &.on
       color rgb(171, 43, 43)
+      border-left 4px solid rgb(171, 43, 43)
 </style>
